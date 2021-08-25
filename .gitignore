@@ -2,7 +2,6 @@
 ### Example user template
 .node_modules
 .cashe
-.node_modules
 **/node_modules
 node_modules/
 # IntelliJ project files
