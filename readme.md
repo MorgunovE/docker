@@ -135,3 +135,65 @@
 135. docker run -d -p 80:4200 --env-file ./config/.env --rm --name logsapp logsapp:env
 136. docker logs logsapp
 137. docker stop logsapp
+138. add Makefile
+139. install in powershell choco -  Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+140. in powershell choco install make
+141. add in path C:\ProgramData\chocolatey\lib\make\tools\install\bin //system/additional parameters system/environment variables /path
+142. make run
+143. docker ps
+144. change Makefile
+145. docker ps -a
+146. make run
+147. make stop
+148. docker ps -a
+149. docker start logsapp
+150. make stop
+151. docker rm logsapp
+152. add code in Dockerfile VOLUME ["/app/data"]
+153. docker rmi logsapp:env
+154. docker images
+155. docker build -t logsapp:volumes .
+156. docker images
+157. change Makefile docker run -d -p 3000:3000 --rm --name logsapp logsapp:volumes
+158. make run
+159. make stop
+160. docker ps -a
+161. make run
+162. docker volume ls
+163. change Makefile docker run -d -p 3000:3000 -v logs:/app/data  --rm --name logsapp logsapp:volumes
+164. docker stop logsapp
+165. docker ps -a
+166. make run
+167. docker stop logsapp
+168. docker ps -a
+169. make run
+170. docker volume ls
+171. docker volume inspect logs
+172. docker volume prune
+173. docker volume create logs
+174. docker stop logsapp
+175. make run
+176. change index.ejs
+177. docker stop logsapp
+178. make run
+179. add code in Makefile run-dev:
+     docker run -d -p 3000:3000 -v "C:\work\docker:/app" -v /app/node_modules -v logs:/app/data  --rm --name logsapp logsapp:volumes
+180. docker stop logsapp
+181. make run-dev
+182. change index.ejs
+183. hodting on Vscale https://vscale.io/ru/ //register
+184. create server
+185. shh key gen C:\Users\1\.ssh and add
+186. https://spy-soft.net/windows-10-openssh-client/
+187. ssh root@80.249.148.213
+188. delete repository from docker hub
+189. docker images
+190. docker tag logsapp:volumes morgunove/logsapp:volumes
+191. docker push morgunove/logsapp:volumes
+192. in ssh docker pull morgunove/logsapp:volumes
+193. in shh docker images
+194. in ssh docker run -d -p 80:3000 --name logsapp --rm morgunove/logsapp:volumes
+195. in ssh docker ps
+196. go to ip 80.249.148.213
+197. in ssh docker stop logsapp
+198. delete server if you not need it
